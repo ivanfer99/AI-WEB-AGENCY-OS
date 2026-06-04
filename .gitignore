@@ -1,0 +1,33 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Node
+node_modules/
+dist/
+build/
+
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*/
+
+# Logs
+*.log
+
+# Entornos
+.env
+.env.local
+
+# Backups
+*.zip
+*.rar
+*.tar.gz
+*.sql
