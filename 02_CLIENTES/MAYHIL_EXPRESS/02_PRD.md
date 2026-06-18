@@ -1,91 +1,69 @@
-# PRD v2 — Mayhil Express
+# PRD — Mayhil Express
 
-**Tipo de proyecto:** Web Corporativa B2B-first
-**Cliente:** Mayhil Express
-**Contacto:** Iván Mayorga — Director de Operaciones
-**Dominio:** mayhilexpress.com
-**Fecha:** 2026-06-17
-**Versión:** 2.0 — Reescritura post-pivot B2B
-**Estado:** Listo para Fase UX/UI
-**Producido por:** 01_JEFE_DE_PROYECTO_IA + 03_ARQUITECTO_WEB
-**Basado en:** Brief v3.1 — Cerrado · Validado por 02_ESTRATEGA_DE_NEGOCIO
+| Campo | Valor |
+|-------|-------|
+| **Proyecto** | Mayhil Express |
+| **Tipo** | Web Corporativa B2B — Generación de Leads |
+| **Dominio** | mayhilexpress.com |
+| **Cliente** | Iván Mayorga — Director de Operaciones |
+| **Contacto** | +51 941 747 096 · servicio@mayhilexpress.com |
+| **Fecha** | 2026-06-17 |
+| **Versión** | 3.0 — Conforme a metodología del sistema |
+| **Estado** | Aprobado internamente · Pendiente validación cliente |
+| **Blueprints aplicados** | 02_WEB_CORPORATIVA + 05_GENERACION_DE_LEADS |
+| **Agentes responsables** | 01_JEFE_DE_PROYECTO_IA + 03_ARQUITECTO_WEB |
+| **Input** | 01_BRIEF_CLIENTE.md v3.1 (Cerrado · Validado) |
 
-> **Nota de versión:** El PRD v1 posicionaba el traslado aeroportuario como servicio principal y usaba WhatsApp como CTA único. Este PRD v2 corrige ese error estratégico: el 70% de los ingresos proviene del Transporte de Personal para Empresas. Toda la arquitectura ha sido rediseñada en consecuencia.
+---
+
+# PARTE I — JEFE DE PROYECTO IA
+
+> Responsabilidad: Alcance, objetivos, riesgos, roadmap, coordinación de agentes.
 
 ---
 
 ## 1. Resumen Ejecutivo
 
-Mayhil Express es una empresa de movilidad corporativa con 5 años de operación en Lima. Su negocio principal son los contratos de Transporte de Personal para empresas (70% de ingresos), complementado con traslados aeroportuarios (20%) y turismo (10%).
+Mayhil Express es una empresa de movilidad corporativa con 5 años de operación en Lima, Perú. El 70% de sus ingresos proviene de contratos B2B de Transporte de Personal para empresas. El restante 30% proviene de traslados aeroportuarios (20%) y turismo (10%).
 
-El sitio web tiene un único objetivo estratégico: **generar solicitudes de cotización de Gerentes de RRHH, Administración y Logística** de empresas medianas y grandes en Lima y regiones (Ica, Pisco, Huacho).
+El proyecto consiste en construir un sitio web corporativo orientado a **generar solicitudes de cotización empresarial** de Gerentes de RRHH, Administración y Logística. La web debe posicionar a Mayhil Express como proveedor formal y confiable de movilidad corporativa, diferenciado por monitoreo GPS, cobertura regional (Lima + Ica, Pisco, Huacho) y referencias de empresas como SEDAPAL, CLARO y MOVISTAR.
 
-La conversión secundaria — contactos B2C por WhatsApp para aeropuerto y turismo — existe pero no puede dominar la arquitectura.
-
-**Arquitectura de conversión objetivo:**
-
-```
-[B2B] Google (keyword corporativa)
-        ↓
-Página Transporte de Personal
-        ↓
-Diferenciadores: GPS · 24/7 · 17 pax · SEDAPAL/CLARO/MOVISTAR
-        ↓
-Formulario de cotización empresarial
-        ↓
-Contacto comercial → Propuesta → Contrato
-
-[B2C] Google (keyword aeropuerto / turismo)
-        ↓
-Página de servicio específico
-        ↓
-CTA WhatsApp con mensaje preconfigurado
-        ↓
-Reserva confirmada
-```
+**CTA primario:** Formulario de cotización B2B.
+**CTA secundario:** WhatsApp (para segmento B2C — aeropuerto y turismo).
 
 ---
 
-## 2. Objetivos del Proyecto
+## 2. Estado del Proyecto
+
+| Fase | Estado | Responsable |
+|------|--------|-------------|
+| Brief | ✅ Completado (v3.1) | 02_ESTRATEGA_DE_NEGOCIO |
+| PRD | ✅ En curso | 01_JEFE_DE_PROYECTO_IA + 03_ARQUITECTO_WEB |
+| Sitemap | ✅ Incluido en este PRD | 03_ARQUITECTO_WEB |
+| SEO Plan | ✅ Completado | 06_EXPERTO_SEO |
+| Wireframes | ✅ Completado | 04_UX_UI_DESIGNER |
+| Copy | ✅ Completado | 05_COPYWRITER_WEB |
+| Desarrollo WordPress | ⏳ Pendiente | 08_WORDPRESS_DEVELOPER |
+| QA | ⏳ Pendiente | 10_QA_MANTENIMIENTO |
+| Lanzamiento | ⏳ Pendiente | 11_DEVOPS_DEPLOYMENT |
+
+---
+
+## 3. Objetivos del Proyecto
 
 ### Objetivo principal (SMART)
-Generar un mínimo de **3 solicitudes de cotización empresarial por mes** vía formulario B2B durante los primeros 3 meses post-lanzamiento, provenientes de empresas con operaciones en Lima o regiones (Ica, Pisco, Huacho).
+
+> Generar un mínimo de **3 solicitudes de cotización empresarial por mes** vía formulario B2B durante los primeros 90 días post-lanzamiento, provenientes de empresas con operaciones en Lima o regiones.
 
 ### Objetivos secundarios
 
-| Objetivo | Indicador de éxito | Plazo |
-|----------|-------------------|-------|
-| Posicionar en Google B2B | Top 10 en 2+ keywords corporativas | 90 días |
-| Generar contactos B2C | ≥ 10 clics WhatsApp/mes | 30 días |
-| Transmitir credibilidad B2B | Sección con SEDAPAL/CLARO/MOVISTAR activa | Lanzamiento |
-| Mejorar imagen profesional | Sitio percibido más profesional que 3 competidores | Lanzamiento |
-| Cobertura regional visible | Sección de cobertura con Lima + Ica/Pisco/Huacho | Lanzamiento |
-
----
-
-## 3. Público Objetivo
-
-### Segmento A — Decisor Corporativo (primario · 70% del negocio)
-
-| Campo | Detalle |
-|-------|---------|
-| Cargo | Gerente de RRHH / Gerente Administrativo / Jefe de Logística |
-| Empresa | Mediana o gran empresa en Lima con +30 colaboradores en campo o turnos rotativos |
-| Sector | Manufactura, retail, salud, construcción, call centers, servicios |
-| Problema | Ausentismo por transporte público, falta de control sobre movilidad del personal |
-| Trigger | Incidente con proveedor actual, KPI de asistencia bajo, expansión de operaciones |
-| Canal | Google (desktop/móvil), referidos, LinkedIn |
-| CTA esperado | **Formulario de cotización empresarial** — no WhatsApp como primer contacto |
-| Lo que necesita ver | GPS, referencias corporativas, cobertura geográfica, disponibilidad 24/7 |
-
-### Segmento B — Viajero / Turista (secundario · 30% del negocio)
-
-| Campo | Detalle |
-|-------|---------|
-| Perfil | Turista nacional/internacional, ejecutivo en tránsito, familia con equipaje |
-| Problema | Traslado confiable al/desde Aeropuerto Jorge Chávez o destino turístico |
-| Canal | Google (móvil), recomendación de hotel, redes sociales |
-| CTA esperado | **WhatsApp directo** con mensaje preconfigurado |
+| # | Objetivo | Criterio de éxito | Plazo |
+|---|----------|------------------|-------|
+| 1 | Posicionamiento B2B en Google | Top 10 en 2+ keywords corporativas | 90 días |
+| 2 | Contactos B2C via WhatsApp | ≥ 10 clics/mes al widget de WhatsApp | 30 días |
+| 3 | Credibilidad institucional | Sección social proof activa al lanzamiento | Día 0 |
+| 4 | Imagen profesional | Sitio percibido mejor que los 3 competidores referenciados | Día 0 |
+| 5 | Cobertura regional visible | Página `/cobertura/` publicada con Lima + Ica/Pisco/Huacho | Día 0 |
 
 ---
 
@@ -93,707 +71,733 @@ Generar un mínimo de **3 solicitudes de cotización empresarial por mes** vía 
 
 ### Dentro del alcance — Fase 1
 
-- Sitio web corporativo bilingüe (ES / EN)
-- 10 páginas en español + 9 páginas equivalentes en inglés
-- Formulario de cotización B2B con campos empresariales
-- Widget de WhatsApp flotante con mensajes diferenciados por audiencia
-- Sección "Empresas que confían en nosotros" (SEDAPAL/CLARO/MOVISTAR — activar si autorización confirmada; fallback con texto genérico)
-- Sección de cobertura geográfica (Lima + Ica, Pisco, Huacho)
-- SEO on-page completo con Rank Math
-- Google Analytics 4 + Google Tag Manager
-- Responsive / mobile-first
+- [x] Sitio web corporativo completo — 10 páginas en español
+- [x] Versión en inglés — 9 páginas equivalentes
+- [x] Formulario de cotización B2B con campos empresariales (9 campos)
+- [x] Widget WhatsApp flotante con mensajes diferenciados por audiencia
+- [x] Sección "Empresas que confían en nosotros" (SEDAPAL/CLARO/MOVISTAR + fallback)
+- [x] Página de cobertura geográfica (Lima + Ica, Pisco, Huacho)
+- [x] SEO on-page con Rank Math (meta titles, descriptions, schema, sitemap XML)
+- [x] Google Analytics 4 + Google Tag Manager
+- [x] Tracking de eventos: formulario enviado + clic WhatsApp
+- [x] Responsive / Mobile-first
 
 ### Fuera del alcance — Fase 1
 
-| Exclusión | Razón |
-|-----------|-------|
-| Ecommerce / tienda online | No requerido por el cliente |
-| Pasarela de pago | No aplica al modelo de negocio |
-| Sistema de reservas automático | El proceso es cotización → propuesta → contrato |
-| Área privada o login | No requerido |
-| CRM | No requerido en fase 1 |
-| Blog | Fase 2 — opcional |
-| Landing pages para Ads | Fase 2 — opcional |
+- [ ] Ecommerce / WooCommerce
+- [ ] Pasarela de pago
+- [ ] Sistema de reservas automático
+- [ ] Área privada / login de clientes
+- [ ] CRM conectado
+- [ ] Blog (Fase 2 — opcional)
+- [ ] Landing pages para Ads (Fase 2 — opcional)
 
 ---
 
-## 5. Sitemap
+## 5. Funcionalidades — Lista Priorizada
 
-### Versión Español (principal)
+| # | Funcionalidad | Prioridad | Plugin / Herramienta | Fase |
+|---|---------------|-----------|----------------------|------|
+| 1 | Formulario cotización B2B (9 campos empresariales) | **CRÍTICA** | Fluent Forms | 1 |
+| 2 | Widget WhatsApp flotante (mensajes diferenciados) | Alta | WP Social Chat | 1 |
+| 3 | Multiidioma ES / EN | Alta | WPML o Polylang | 1 |
+| 4 | Galería de flota con especificaciones (H350) | Alta | ACF + Elementor | 1 |
+| 5 | Sección social proof "Empresas que confían" | Alta (condicional) | Elementor Global | 1 |
+| 6 | Página de cobertura con mapa embed | Alta | Google Maps + Elementor | 1 |
+| 7 | SEO on-page completo + Schema markup | Alta | Rank Math | 1 |
+| 8 | GA4 + GTM + eventos formulario/WhatsApp | Alta | GTM | 1 |
+| 9 | Header sticky con CTA "Solicitar cotización" | Alta | Elementor Theme Builder | 1 |
+| 10 | Footer global con info de contacto | Media | Elementor Theme Builder | 1 |
+| 11 | FAQ con accordion en página dedicada | Media | Elementor Accordion | 1 |
+| 12 | Breadcrumbs en subpáginas | Media | Rank Math | 1 |
+| 13 | Sitemap XML enviado a Search Console | Alta | Rank Math | 1 |
+| 14 | Blog | No | — | 2 |
+| 15 | Landing Ads dedicada | No | — | 2 |
+
+---
+
+## 6. Gestión de Riesgos
+
+### Riesgos de negocio
+
+| Riesgo | Probabilidad | Impacto | Mitigación |
+|--------|:---:|:---:|------------|
+| Autorización SEDAPAL/CLARO/MOVISTAR no llega antes del lanzamiento | Media | Alto | Preparar fallback con texto genérico — no retrasar lanzamiento |
+| Cliente B2C puede diluir posicionamiento B2B | Media | Medio | Arquitectura separada: formulario B2B / WhatsApp B2C |
+| Sin presencia digital actual que aporte autoridad de dominio | Alta | Medio | Empezar a construir autoridad desde lanzamiento: GBP + contenido + citaciones |
+
+### Riesgos de contenido
+
+| Riesgo | Probabilidad | Impacto | Mitigación |
+|--------|:---:|:---:|------------|
+| Cliente no entrega materiales a tiempo (fotos, textos, logo) | Alta | Alto | Solicitar todo en sesión de onboarding pre-inicio |
+| Testimonios no disponibles al lanzamiento | Alta | Medio | Lanzar con social proof de empresa (SEDAPAL/CLARO/MOVISTAR) o fallback |
+| Precios no confirmados para B2C | Media | Bajo | Publicar "cotización a medida" sin precios fijos |
+
+### Riesgos de SEO
+
+| Riesgo | Probabilidad | Impacto | Mitigación |
+|--------|:---:|:---:|------------|
+| Resultados orgánicos lentos (3–6 meses normales) | Alta | Bajo | Alinear expectativas con el cliente desde el inicio |
+| Competidores con más dominio authority | Media | Medio | Keywords regionales de baja competencia + long tail B2B |
+| Duplicación ES/EN sin hreflang | Media | Medio | Configurar hreflang correctamente via WPML/Polylang |
+
+### Riesgos técnicos
+
+| Riesgo | Probabilidad | Impacto | Mitigación |
+|--------|:---:|:---:|------------|
+| Hosting inadecuado para WordPress + Elementor | Media | Alto | Confirmar hosting antes de instalar — mínimo 2GB RAM, PHP 8.1 |
+| Accesos a dominio/hosting no entregados | Media | Alto | Solicitar todos los accesos en onboarding |
+| Core Web Vitals bajos por imágenes no optimizadas | Media | Medio | WebP obligatorio + LiteSpeed Cache + Cloudflare |
+
+---
+
+## 7. Roadmap del Proyecto
 
 ```
-/                                          → Inicio
-├── /nosotros/                             → Nosotros
+FASE 1 — SETUP (Día 1)
+  └── Instalación WordPress + stack base + configuración inicial
+
+FASE 2 — HOME + CORE (Días 2–4)
+  └── Home completo (Hero, Servicios, Diferenciadores, Social Proof, Formulario B2B, Flota, Cobertura)
+  └── Formulario de cotización B2B funcional + notificaciones
+
+FASE 3 — PÁGINA CRÍTICA (Días 3–5)
+  └── /servicios/transporte-de-personal/ (GPS, Cobertura, Social Proof, Formulario embebido)
+
+FASE 4 — PÁGINAS SECUNDARIAS (Días 5–7)
+  └── Nosotros + Cobertura + Corporativo + Aeropuerto + Turístico + Grupos + FAQ + Contacto
+
+FASE 5 — MULTIIDIOMA (Días 7–9)
+  └── Versión EN — 9 páginas equivalentes
+
+FASE 6 — SEO ON-PAGE (Día 9)
+  └── Rank Math: meta titles, descriptions, schema, breadcrumbs, sitemap XML
+
+FASE 7 — INTEGRACIONES (Día 10)
+  └── GA4 + GTM + tracking formulario + WhatsApp + Search Console
+
+FASE 8 — QA (Día 11)
+  └── Responsive, velocidad, formulario, enlaces, cross-browser
+
+FASE 9 — LANZAMIENTO (Día 12–13)
+  └── Deploy a producción + GBP + configuración DNS
+
+FASE 10 — POST-LANZAMIENTO (Día 14+)
+  └── Monitoreo, correcciones, primeros reportes SEO
+```
+
+**Tiempo total estimado:** ~13–14 días hábiles
+*(Baseline blueprint Web Corporativa: 5–15 días según complejidad)*
+
+---
+
+## 8. Agentes Involucrados
+
+| Agente | Responsabilidad | Estado |
+|--------|----------------|--------|
+| 02_ESTRATEGA_DE_NEGOCIO | Brief v3.1 — validación estratégica completa | ✅ |
+| 01_JEFE_DE_PROYECTO_IA | PRD, alcance, riesgos, roadmap | ✅ |
+| 03_ARQUITECTO_WEB | Arquitectura, sitemap, stack, Mermaid | ✅ |
+| 06_EXPERTO_SEO | SEO Plan, keywords, schema, roadmap SEO | ✅ |
+| 04_UX_UI_DESIGNER | Wireframes, Design System, Prompt Stitch | ✅ |
+| 05_COPYWRITER_WEB | Copy completo ES + EN, CTAs, FAQs | ✅ |
+| 08_WORDPRESS_DEVELOPER | Desarrollo WordPress + Elementor + plugins | ⏳ |
+| 10_QA_MANTENIMIENTO | Testing, checklist, validación final | ⏳ |
+| 11_DEVOPS_DEPLOYMENT | Deploy, DNS, entorno de producción | ⏳ |
+
+---
+
+## 9. Próxima Acción
+
+**Agente activo:** `08_WORDPRESS_DEVELOPER`
+
+**Inputs disponibles:**
+- `01_BRIEF_CLIENTE.md` v3.1
+- `02_PRD.md` (este documento)
+- `03_SEO_PLAN.md`
+- `04_WIREFRAMES.md`
+- `05_COPY.md`
+
+**Acción inmediata:**
+Iniciar setup de WordPress en hosting confirmado e instalar stack base (Elementor Pro, Rank Math, Fluent Forms, ACF, WPML/Polylang, WP Social Chat, GTM Plugin, LiteSpeed Cache, Cloudflare).
+
+**Prerrequisito crítico:** Confirmar con el cliente: hosting, acceso al dominio, accesos Google (GA4, Search Console, GTM) y autorización SEDAPAL/CLARO/MOVISTAR.
+
+---
+
+# PARTE II — ARQUITECTO WEB
+
+> Responsabilidad: Arquitectura de información, sitemap, flujos de usuario, stack técnico, Mermaid, URLs.
+
+---
+
+## 10. Resumen Arquitectónico
+
+**Tipo de proyecto:** Web Corporativa B2B-first con componente de Generación de Leads
+**Blueprint principal:** `02_WEB_CORPORATIVA.md`
+**Blueprint secundario:** `05_GENERACION_DE_LEADS.md`
+**Patrón de conversión del blueprint:** `Home → Servicio → Formulario → CRM/WhatsApp → Lead`
+
+**Decisión arquitectónica crítica:**
+La página `/servicios/transporte-de-personal/` es la página pilar del proyecto. Concentra el 70% del valor del negocio, el mayor esfuerzo de contenido y la inversión SEO principal. Toda la arquitectura irradia desde esta página.
+
+---
+
+## 11. Sitemap Completo
+
+### Español (principal)
+
+```
+/                                           → Home
+├── /nosotros/                              → Nosotros
 ├── /servicios/
-│   ├── /servicios/transporte-de-personal/ → Transporte de Personal ★ CRÍTICA
-│   ├── /servicios/transporte-corporativo/ → Transporte Corporativo / Ejecutivo
-│   ├── /servicios/traslado-aeropuerto/    → Traslado al Aeropuerto
-│   ├── /servicios/transporte-turistico/   → Transporte Turístico
-│   └── /servicios/transporte-grupos/      → Transporte para Grupos
-├── /cobertura/                            → Zonas de Cobertura ★ NUEVA
-├── /preguntas-frecuentes/                 → Preguntas Frecuentes
-└── /contacto/                             → Contacto
+│   ├── /servicios/transporte-de-personal/  → Transporte de Personal ★ PILAR
+│   ├── /servicios/transporte-corporativo/  → Transporte Corporativo
+│   ├── /servicios/traslado-aeropuerto/     → Traslado Aeropuerto
+│   ├── /servicios/transporte-turistico/    → Transporte Turístico
+│   └── /servicios/transporte-grupos/       → Transporte para Grupos
+├── /cobertura/                             → Zonas de Cobertura ★ NUEVA
+├── /preguntas-frecuentes/                  → Preguntas Frecuentes
+└── /contacto/                              → Contacto
 ```
 
-**Total ES: 10 páginas**
+**Total español: 10 páginas**
 
-### Versión Inglés (secundaria)
+### Inglés (secundaria)
 
 ```
-/en/                                       → Home
-├── /en/about/                             → About Us
+/en/                                        → Home EN
+├── /en/about/                              → About Us
 ├── /en/services/
-│   ├── /en/services/staff-transport/      → Staff Transport ★ CRITICAL
-│   ├── /en/services/airport-transfer/     → Airport Transfer
-│   └── /en/services/tour-transport/       → Tour Transport
-├── /en/coverage/                          → Coverage Areas
-├── /en/faq/                               → FAQ
-└── /en/contact/                           → Contact
+│   ├── /en/services/staff-transport/       → Staff Transport ★ PILAR EN
+│   ├── /en/services/airport-transfer/      → Airport Transfer
+│   └── /en/services/tour-transport/        → Tour Transport
+├── /en/coverage/                           → Coverage Areas
+├── /en/faq/                                → FAQ
+└── /en/contact/                            → Contact
 ```
 
-**Total EN: 9 páginas**
+**Total inglés: 9 páginas** *(versión EN más compacta — ver decisión en sección 18)*
 
-> **Decisión arquitectónica:** La versión EN es más compacta. Transporte Corporativo y para Grupos se fusionan en un Staff Transport ampliado para simplificar la estructura en inglés y concentrar la autoridad SEO en una sola página.
-
----
-
-## 6. Especificación de Páginas
-
-### 6.1 Inicio (`/`)
-
-**Propósito:** Capturar la intención B2B en los primeros 5 segundos y dirigir al formulario de cotización.
-
-| # | Sección | Contenido | CTA |
-|---|---------|-----------|-----|
-| 1 | Hero B2B | Headline: propuesta de valor corporativa · Subheadline: GPS / 24/7 / 17 pax / Lima + regiones · Foto del H350 | "Solicitar cotización empresarial" → formulario |
-| 2 | Barra de confianza | Íconos: Monitoreo GPS · Disponible 24/7 · 17 Pasajeros · Lima + Ica · Pisco · Huacho | — |
-| 3 | Servicios (resumen) | 5 tarjetas en orden B2B-first: Personal → Corporativo → Aeropuerto → Turístico → Grupos | "Ver servicio" → página respectiva |
-| 4 | Diferenciadores | 5–6 pilares con ícono: GPS en tiempo real · Capacidad grupal · Disponibilidad 24/7 · Cobertura regional · Sin permanencia mínima · Atención bilingüe | — |
-| 5 | Empresas que confían | Logos: SEDAPAL · CLARO · MOVISTAR *(activar si autorización confirmada)* · Fallback: "Empresas del sector telecomunicaciones y servicios públicos" | — |
-| 6 | Formulario de cotización B2B | Formulario embebido con campos empresariales (ver sección 7.1) | "Enviar solicitud" |
-| 7 | Flota | Foto real del H350 interior/exterior · Ficha: 17 pax, A/C, WiFi, GPS, maletero amplio | — |
-| 8 | Cobertura (resumen) | Mapa o listado: Lima completo + Ica · Pisco · Huacho y periferias | "Ver cobertura completa" → /cobertura/ |
-| 9 | CTA final B2C | Bloque secundario para aeropuerto/turismo · WhatsApp | "Consultar por WhatsApp" |
+**Total global: 19 páginas**
 
 ---
 
-### 6.2 Nosotros (`/nosotros/`)
+## 12. Arquitectura de Información
 
-**Propósito:** Construir confianza institucional y transmitir solidez como proveedor B2B.
+### Jerarquía de contenidos
 
-| Sección | Contenido |
-|---------|-----------|
-| Historia | 5 años de operación · Origen · Misión: garantizar que el personal de las empresas llega a tiempo |
-| Nuestra flota | Hyundai H350: ficha técnica · fotos reales · capacidad · GPS · A/C · WiFi · maletero |
-| Misión y valores | Puntualidad · Seguridad · Control · Trazabilidad · Atención 24/7 |
-| Nuestros diferenciales | GPS · Cobertura regional · Referencias corporativas · Por viaje sin permanencia mínima |
-| CTA | "¿Necesitas transportar a tu personal? Solicita cotización" → formulario |
+| Nivel | Página | Keyword objetivo | Tipo de contenido |
+|-------|--------|-----------------|-------------------|
+| 1 — Hub | Home `/` | transporte de personal lima | Presentación + distribuidor |
+| 2 — Pilar | Transporte Personal | transporte de personal lima | Servicio profundo + GPS + cobertura + formulario |
+| 2 — Pilar | Cobertura | cobertura lima ica pisco huacho | Diferenciador geográfico |
+| 3 — Servicio | Corporativo | transporte corporativo lima | Servicio B2B complementario |
+| 3 — Servicio | Aeropuerto | traslado aeropuerto lima | Servicio B2C principal |
+| 3 — Servicio | Turístico | transporte turístico lima | Servicio B2C complementario |
+| 3 — Servicio | Grupos | transporte privado grupos lima | Capacidad diferenciadora |
+| 4 — Soporte | Nosotros | empresa transporte lima 5 años | E-E-A-T + confianza |
+| 4 — Soporte | FAQ | preguntas transporte personal | Long tail + objeciones |
+| 4 — Conversión | Contacto | cotizar transporte personal lima | CTA directo |
 
----
+### Módulos activados (Blueprint Web Corporativa)
 
-### 6.3 Transporte de Personal (`/servicios/transporte-de-personal/`) ★
+**Core (obligatorios):**
+- [x] Home
+- [x] Nosotros
+- [x] Servicios (hub + 5 páginas de servicio)
+- [x] Contacto
 
-**Prioridad: CRÍTICA. Página de mayor inversión de contenido y SEO.**
+**SEO (opcionales activados):**
+- [x] FAQs
+- [ ] Blog (Fase 2)
+- [ ] Casos de éxito (pendiente — reemplazado por social proof inline)
 
-**Keyword principal:** `transporte de personal lima`
-**Keywords secundarias:** `empresa de transporte de personal`, `transporte empresarial lima`, `movilidad para empresas lima`, `transporte de personal Lima Ica`, `transporte de personal Lima Pisco`
+**Corporativo (opcionales activados):**
+- [x] Clientes / Social proof (SEDAPAL/CLARO/MOVISTAR)
+- [x] Testimon. sugeridos (plantillas disponibles en 05_COPY.md)
+- [ ] Equipo (PENDIENTE DE VALIDACIÓN — fotos y datos del equipo)
+- [ ] Certificaciones (PENDIENTE DE VALIDACIÓN)
 
-| # | Sección | Contenido | CTA |
-|---|---------|-----------|-----|
-| 1 | Hero | "Transportamos a tu personal con puntualidad, seguridad y control" · Foto H350 con empleados | "Solicitar cotización" → formulario |
-| 2 | Propuesta de valor | Elimina el ausentismo causado por transporte público · Garantiza puntualidad · 24/7 para turnos rotativos | — |
-| 3 | GPS — diferenciador central | Bloque destacado: monitoreo en tiempo real · seguimiento de rutas · reporte de servicio | — |
-| 4 | Capacidad y flota | Hasta 17 colaboradores en un solo vehículo · cobertura de zona industrial o planta | — |
-| 5 | Cobertura | Lima (todos los distritos) · Ica · Pisco · Huacho y periferias · mapa o listado visual | — |
-| 6 | Modelo de contratación | Por viaje — sin permanencia mínima · Sin riesgo de entrada · "Prueba el servicio sin compromisos" | — |
-| 7 | Empresas que confían | SEDAPAL · CLARO · MOVISTAR *(activar si autorización confirmada)* | — |
-| 8 | ¿Cómo funciona? | Paso 1: Solicitar cotización → Paso 2: Propuesta a medida → Paso 3: Primer servicio | — |
-| 9 | Objeciones frecuentes | ¿Qué pasa si el vehículo falla? · ¿Tienen facturación formal? · ¿Cubren mi zona? | — |
-| 10 | Formulario de cotización B2B | Formulario completo con campos empresariales (ver sección 7.1) | "Enviar solicitud de cotización" |
+**Internacional:**
+- [x] Multiidioma ES / EN
 
----
-
-### 6.4 Transporte Corporativo / Ejecutivo (`/servicios/transporte-corporativo/`)
-
-**Keyword principal:** `transporte corporativo lima`
-
-| Sección | Contenido |
-|---------|-----------|
-| Hero | Movilidad ejecutiva para empresas · eventos · reuniones · visitas de clientes |
-| Servicios incluidos | Traslados a reuniones · eventos corporativos · visitas a clientes · aeropuerto para ejecutivos |
-| Flota | H350 · discreción · puntualidad · imagen corporativa |
-| Ventajas | Conductor profesional · sin estacionamientos · puntualidad garantizada |
-| CTA | "Coordinar traslado corporativo" → formulario |
+**Leads:**
+- [x] Formulario B2B (9 campos)
+- [x] WhatsApp flotante
+- [ ] Landing Pages Ads (Fase 2)
 
 ---
 
-### 6.5 Traslado al Aeropuerto (`/servicios/traslado-aeropuerto/`)
+## 13. Flujo de Usuario
 
-**Keyword principal:** `traslado aeropuerto lima`
-**Keywords secundarias:** `van aeropuerto lima`, `transporte aeropuerto jorge chavez`
-
-| Sección | Contenido |
-|---------|-----------|
-| Hero | Llega al aeropuerto sin estrés · puntual y cómodo |
-| Descripción | Aeropuerto Internacional Jorge Chávez · salidas y llegadas · 24/7 |
-| ¿Cómo funciona? | Reserva → Confirmación → Recojo en domicilio → Llegada puntual |
-| Para quién | Familias · grupos · ejecutivos · turistas · equipaje voluminoso |
-| Características del vehículo | H350 · 17 pasajeros · A/C · WiFi · maletero amplio |
-| CTA | "Reservar traslado por WhatsApp" → WhatsApp con mensaje preconfigurado B2C |
-
----
-
-### 6.6 Transporte Turístico (`/servicios/transporte-turistico/`)
-
-**Keyword principal:** `transporte turístico lima`
-
-| Sección | Contenido |
-|---------|-----------|
-| Hero | Explora Lima y sus alrededores en privado · vehículo exclusivo para tu grupo |
-| Destinos | Lima ciudad · Paracas · Huacachina (Ica) · Pisco · Chincha · PENDIENTE DE VALIDACIÓN |
-| Características | Vehículo privado · A/C · WiFi · capacidad hasta 17 pasajeros |
-| Ideal para | Grupos familiares · turistas · agencias de viaje · hoteles |
-| CTA | "Planifica tu ruta por WhatsApp" → WhatsApp B2C |
-
----
-
-### 6.7 Transporte para Grupos (`/servicios/transporte-grupos/`)
-
-**Keyword principal:** `transporte privado grupos lima`
-
-| Sección | Contenido |
-|---------|-----------|
-| Hero | Un solo vehículo · hasta 17 pasajeros · sin dividir el grupo |
-| Casos de uso | Eventos · graduaciones · excursiones · cumpleaños · salidas de empresa |
-| Ventajas | Precio único · espacio para equipaje · sin dividir el grupo · privado |
-| Capacidad | Hasta 17 pasajeros — ningún competidor estándar iguala este número en van privada |
-| CTA | "Cotizar para mi grupo" → formulario (campo: cantidad de personas) |
-
----
-
-### 6.8 Zonas de Cobertura (`/cobertura/`) ★ NUEVA
-
-**Propósito:** Resolver la objeción #1 de decisores B2B — "¿cubren la zona donde opero?"
-
-| Sección | Contenido |
-|---------|-----------|
-| Intro | "Cubrimos toda Lima y llegamos hasta donde tu empresa opera" |
-| Lima — todos los distritos | Listado o mapa visual de todos los distritos de Lima Metropolitana |
-| Cobertura regional | Ica · Pisco · Huacho · periferias — destacar como diferenciador |
-| Casos de uso por región | Ica: agroindustria, agroexportación · Pisco: pesca, industria · Huacho: manufactura, industria |
-| Turismo regional | Paracas · Huacachina · rutas interprovinciales |
-| ¿Mi zona no aparece? | "Consúltanos — operamos a medida de tu empresa" → formulario |
-
----
-
-### 6.9 Preguntas Frecuentes (`/preguntas-frecuentes/`)
-
-**Propósito:** Resolver objeciones B2B y B2C, reducir fricción y aportar contenido SEO de cola larga.
-
-**FAQs propuestas — B2B (prioritarias):**
-
-1. ¿Qué tipo de empresas contratan el servicio de transporte de personal?
-2. ¿Cuál es el modelo de contratación? ¿Debo firmar un contrato mínimo?
-3. ¿Cuántas personas puede transportar el vehículo?
-4. ¿Ofrecen monitoreo GPS de las rutas?
-5. ¿Cuál es el tiempo de respuesta para una cotización?
-6. ¿Qué zonas cubren fuera de Lima?
-7. ¿Tienen disponibilidad para turnos nocturnos o fines de semana?
-8. ¿Emiten facturas y tienen RUC activo?
-
-**FAQs propuestas — B2C (complementarias):**
-
-9. ¿Con cuánta anticipación debo reservar mi traslado al aeropuerto?
-10. ¿El servicio funciona las 24 horas?
-11. ¿Cuánto equipaje puedo llevar?
-12. ¿Tienen atención en inglés?
-
-*Lista a validar y completar con el cliente antes del desarrollo.*
-
----
-
-### 6.10 Contacto (`/contacto/`)
-
-**Propósito:** Canalizar leads B2B al formulario y leads B2C al WhatsApp.
-
-| Elemento | Detalle |
-|----------|---------|
-| Hero | "¿Necesitas transportar a tu equipo? Contáctanos" |
-| Formulario B2B | Formulario completo de cotización empresarial (ver sección 7.1) |
-| WhatsApp B2C | Botón: "¿Traslado al aeropuerto o tour? Escríbenos por WhatsApp" con mensaje preconfigurado B2C |
-| Email | servicio@mayhilexpress.com |
-| Teléfono | +51 941 747 096 |
-| Horario | Disponibles 24 horas · 365 días del año |
-| Dirección | PENDIENTE DE VALIDACIÓN |
-
----
-
-## 7. Funcionalidades
-
-### 7.1 Formulario de Cotización B2B (PRIORITARIO)
-
-El formulario es la funcionalidad más crítica del sitio. Debe recoger datos que permitan elaborar una propuesta comercial sin necesidad de una llamada previa.
-
-**Campos obligatorios:**
-
-| Campo | Tipo | Ejemplo |
-|-------|------|---------|
-| Nombre de la empresa | Texto | "Empresa S.A.C." |
-| Nombre del responsable | Texto | "Juan Pérez" |
-| Cargo | Texto | "Gerente de RRHH" |
-| Email corporativo | Email | "juan@empresa.com" |
-| Teléfono | Teléfono | "+51 9XX XXX XXX" |
-| Cantidad de personas a transportar | Número o selector | 1–17 / 17+ |
-| Zona o distritos de recojo | Texto libre | "Chorrillos, Lurín" |
-| Zona o distritos de destino | Texto libre | "San Isidro, Miraflores" |
-| Frecuencia estimada | Selector | Diario / Semanal / Puntual / Por definir |
-| Horario aproximado | Texto | "6:00 AM y 10:00 PM" |
-| Mensaje adicional | Textarea | — |
-
-**Herramienta:** Fluent Forms (o Contact Form 7 como alternativa)
-**Destino de envío:** Email a servicio@mayhilexpress.com + notificación WhatsApp al Director de Operaciones
-**Confirmación al lead:** Email automático de acuse de recibo
-
----
-
-### 7.2 Tabla de Funcionalidades
-
-| Funcionalidad | Prioridad | Herramienta | Fase |
-|---------------|-----------|-------------|------|
-| Formulario de cotización B2B | **CRÍTICA** | Fluent Forms | 1 |
-| Widget WhatsApp flotante — B2C | Alta | WP Social Chat | 1 |
-| WhatsApp mensaje B2B diferenciado | Alta | WP Social Chat | 1 |
-| Multiidioma ES / EN | Alta | WPML o Polylang | 1 |
-| Galería de flota con especificaciones | Alta | Elementor Gallery | 1 |
-| Sección "Empresas que confían" | Alta (condicional) | Elementor | 1 |
-| Sección de cobertura con mapa/listado | Alta | Elementor + Google Maps embed | 1 |
-| SEO on-page por página | Alta | Rank Math | 1 |
-| Schema markup LocalBusiness + TransportService | Alta | Rank Math | 1 |
-| Google Analytics 4 | Alta | GTM | 1 |
-| Google Tag Manager | Alta | Plugin GTM | 1 |
-| Tracking de eventos: formulario + WhatsApp | Alta | GTM | 1 |
-| Responsive / mobile-first | Alta | Elementor Pro | 1 |
-| Velocidad: Core Web Vitals | Alta | LiteSpeed Cache + Cloudflare | 1 |
-| Blog | No | — | 2 |
-| Landing Ads | No | — | 2 |
-| Ecommerce | No | — | — |
-| Reservas automáticas | No | — | — |
-| Pasarela de pago | No | — | — |
-| Área privada | No | — | — |
-
----
-
-## 8. Arquitectura de Conversión
-
-### Flujo B2B (primario)
+### Flujo B2B (primario — 70% del negocio)
 
 ```
-1. Usuario busca en Google: "transporte de personal lima"
-2. Encuentra /servicios/transporte-de-personal/ (o Home)
-3. Ve diferenciadores: GPS · SEDAPAL/CLARO/MOVISTAR · Cobertura Lima + regiones
-4. Descubre modelo por viaje: sin permanencia mínima — barrera baja
-5. Completa formulario de cotización empresarial
-6. Recibe email de confirmación automático
-7. Mayhil Express responde con propuesta en ≤24h
-8. Cierre de primer viaje → relación recurrente
+[Google] "transporte de personal lima"
+         ↓
+[Página] /servicios/transporte-de-personal/
+         ↓
+[Ve] GPS diferenciador + SEDAPAL/CLARO/MOVISTAR + cobertura Lima+regiones
+         ↓
+[Lee] "Sin permanencia mínima — prueba el servicio sin compromisos"
+         ↓
+[Acción] Completa formulario de cotización (9 campos empresariales)
+         ↓
+[Sistema] Notificación email a servicio@mayhilexpress.com
+         ↓
+[Mayhil] Responde con propuesta en <24 horas
+         ↓
+[Resultado] Primer servicio → cliente recurrente
 ```
 
-### Flujo B2C (secundario)
+### Flujo B2C (secundario — 30% del negocio)
 
 ```
-1. Usuario busca en Google: "traslado aeropuerto lima" / "transporte turístico"
-2. Encuentra página de servicio específico
-3. Ve características del vehículo y horario 24/7
-4. Hace clic en botón WhatsApp (mensaje preconfigurado B2C)
-5. Confirma reserva por WhatsApp en minutos
+[Google] "traslado aeropuerto lima" / "tour privado lima"
+         ↓
+[Página] /servicios/traslado-aeropuerto/ o /servicios/transporte-turistico/
+         ↓
+[Ve] Vehículo H350 + disponibilidad 24/7 + espacio para equipaje
+         ↓
+[Acción] Clic en botón WhatsApp con mensaje preconfigurado
+         ↓
+[Resultado] Reserva confirmada por WhatsApp
 ```
 
-### Mensajes WhatsApp preconfigurados
-
-**Widget B2B:**
-```
-Hola, soy [nombre] de [empresa]. Me gustaría solicitar una cotización para 
-transporte de personal. ¿Me pueden contactar?
-```
-
-**Widget B2C (aeropuerto / turismo):**
-```
-Hola, me gustaría cotizar un traslado al aeropuerto / tour. ¿Tienen disponibilidad?
-```
-
-### CTAs por audiencia
-
-| Audiencia | CTA primario | CTA secundario |
-|-----------|-------------|----------------|
-| B2B (Empresas) | "Solicitar cotización empresarial" → formulario | "Consultar por WhatsApp" |
-| B2C (Viajeros) | "Reservar por WhatsApp" → WhatsApp | Formulario de contacto |
-
----
-
-## 9. Branding y Estilo
-
-| Elemento | Especificación |
-|----------|---------------|
-| Colores | Amarillo · Negro · Blanco (confirmados con el cliente) |
-| Amarillo | CTAs, botones, acentos, íconos de diferenciadores |
-| Negro | Navbar, fondos premium, texto principal |
-| Blanco | Fondos de sección, tarjetas, espaciado |
-| Tipografía | PENDIENTE DE VALIDACIÓN — sugerido: Montserrat (títulos) + Inter (cuerpo) |
-| Fotografías | Fotos reales del H350 disponibles — usar en hero, páginas de servicio y galería |
-| Videos | PENDIENTE DE VALIDACIÓN — recomendado para página de Transporte de Personal |
-| Tono B2B | Directo · orientado a resultados · lenguaje de negocios |
-| Tono B2C | Cercano · confiable · claro · seguro |
-| Estilo visual | Profesional · Corporativo · Moderno — sin ilustraciones · íconos lineales |
-
----
-
-## 10. Arquitectura SEO
-
-### Clusters de keywords
-
-#### Cluster 1 — Transporte de Personal (CORE — página pilar)
-
-| Keyword | Tipo | Página objetivo |
-|---------|------|----------------|
-| transporte de personal lima | Comercial alta intención | /servicios/transporte-de-personal/ |
-| empresa de transporte de personal | Comercial | /servicios/transporte-de-personal/ |
-| transporte empresarial lima | Comercial | /servicios/transporte-de-personal/ |
-| movilidad para empresas lima | Comercial | /servicios/transporte-de-personal/ |
-| servicio de transporte de personal | Informacional | /servicios/transporte-de-personal/ |
-| transporte de personal Lima Ica | Regional B2B | /servicios/transporte-de-personal/ + /cobertura/ |
-| transporte de personal Lima Pisco | Regional B2B | /servicios/transporte-de-personal/ + /cobertura/ |
-| transporte de personal Lima Huacho | Regional B2B | /servicios/transporte-de-personal/ + /cobertura/ |
-
-#### Cluster 2 — Transporte Corporativo / Ejecutivo
-
-| Keyword | Tipo | Página objetivo |
-|---------|------|----------------|
-| transporte corporativo lima | Comercial | /servicios/transporte-corporativo/ |
-| transporte ejecutivo lima | Comercial | /servicios/transporte-corporativo/ |
-
-#### Cluster 3 — Aeropuerto y Turismo (secundario)
-
-| Keyword | Tipo | Página objetivo |
-|---------|------|----------------|
-| traslado aeropuerto lima | Comercial | /servicios/traslado-aeropuerto/ |
-| van aeropuerto lima | Comercial | /servicios/traslado-aeropuerto/ |
-| transporte aeropuerto jorge chavez | Comercial | /servicios/traslado-aeropuerto/ |
-| transporte turístico lima | Comercial | /servicios/transporte-turistico/ |
-
-#### Cluster 4 — Cobertura Regional (oportunidad diferencial)
-
-| Keyword | Tipo | Página objetivo |
-|---------|------|----------------|
-| transporte empresarial Lima Ica | Regional | /cobertura/ |
-| traslado Lima Ica empresas | Regional | /cobertura/ |
-| van Lima Ica | Regional | /cobertura/ |
-| transporte Lima Pisco | Regional | /cobertura/ |
-| transporte Lima Huacho empresas | Regional | /cobertura/ |
-
-### Configuración técnica — Rank Math
-
-| Elemento | Detalle |
-|----------|---------|
-| Schema markup | `LocalBusiness` + `TransportService` en Home |
-| Schema markup por servicio | `Service` en cada página de servicio |
-| Schema markup FAQ | `FAQPage` en /preguntas-frecuentes/ |
-| Meta titles | Únicos por página · keyword principal al inicio |
-| Meta descriptions | Únicas · CTA incluido · ≤ 160 caracteres |
-| Open Graph | Imagen destacada + título + descripción por página |
-| Breadcrumbs | Activados en subpáginas de servicios |
-| Sitemap XML | Generado automáticamente · enviar a Search Console |
-| Canonicals | Configurados para evitar duplicación ES/EN |
-| Alt text | En todas las imágenes del sitio |
-
-### Enlazado interno estratégico
+### Flujo navegacional (alternativo)
 
 ```
-Home → Transporte de Personal (enlace destacado en hero y sección servicios)
-Home → Cobertura (enlace desde sección diferenciadores)
-Transporte de Personal → Cobertura (enlace interno)
-Transporte Personal → Transporte Corporativo (enlace sugerido al pie)
-FAQ → Transporte de Personal (enlace desde preguntas B2B)
-Contacto → Transporte de Personal (enlace de texto ancla)
+[Google/Referido] → Home
+                   ↓
+        [Navega] Servicios → /servicios/transporte-de-personal/ (★)
+                   ↓
+        [Alternativa] FAQ → responde objeciones → regresa al formulario
+                   ↓
+        [Alternativa] Cobertura → confirma zona → formulario
 ```
 
 ---
 
-## 11. Stack Tecnológico
+## 14. Arquitectura SEO — Resumen
 
-| Capa | Herramienta | Justificación |
-|------|-------------|---------------|
-| CMS | WordPress | Requerido por el cliente |
-| Page Builder | Elementor Pro | Requerido por el cliente |
-| SEO | Rank Math | Requerido por el cliente |
-| Formularios | Fluent Forms | Campos personalizados B2B · notificaciones configurables |
-| Multiidioma | WPML (preferido) o Polylang | Compatibilidad con Elementor Pro |
-| WhatsApp widget | WP Social Chat | Mensajes diferenciados por página / audiencia |
-| Analytics | Google Analytics 4 (vía GTM) | Tracking de eventos B2B (formulario + WhatsApp) |
-| Tag Manager | Google Tag Manager | Gestión de tags sin tocar código |
-| CDN / Seguridad | Cloudflare (plan Free o Pro) | Performance y protección |
-| Caché / Performance | LiteSpeed Cache | Core Web Vitals en hosting compartido |
-| Tipos de contenido | ACF (Advanced Custom Fields) | Para galería de flota y datos estructurados de servicios |
+*(Detalle completo en `03_SEO_PLAN.md`)*
 
----
+### Clusters principales
 
-## 12. Integraciones
+| Cluster | Página pilar | Keyword pilar | Prioridad |
+|---------|-------------|--------------|-----------|
+| Transporte de Personal | /servicios/transporte-de-personal/ | transporte de personal lima | ★★★★★ |
+| Cobertura Regional | /cobertura/ | cobertura transporte lima ica pisco | ★★★★★ |
+| Aeropuerto | /servicios/traslado-aeropuerto/ | traslado aeropuerto lima | ★★★★☆ |
+| Corporativo | /servicios/transporte-corporativo/ | transporte corporativo lima | ★★★☆☆ |
+| Turismo | /servicios/transporte-turistico/ | transporte turístico lima | ★★★☆☆ |
 
-| Integración | Prioridad | Estado | Requiere acción del cliente |
-|-------------|-----------|--------|-----------------------------|
-| Google Analytics 4 | Alta | Pendiente | Sí — crear cuenta o dar acceso |
-| Google Search Console | Alta | Pendiente | Sí — verificar dominio |
-| Google Tag Manager | Alta | Pendiente | Sí — crear contenedor o dar acceso |
-| Google Business Profile | Alta | PENDIENTE DE VALIDACIÓN | Sí — crear o dar acceso |
-| WhatsApp Business (+51 941 747 096) | Alta | Confirmar número activo | Confirmar número |
-| Google Maps (embed cobertura) | Media | Pendiente | No — gestión agencia |
-| Email (notificaciones formulario) | Alta | Pendiente | Confirmar email destino |
-| Meta Pixel | Baja | Fuera de alcance fase 1 | — |
+### Schema markup por página
 
----
+| Página | Schema |
+|--------|--------|
+| Home | `Organization` + `LocalBusiness` (TransportService) + `WebSite` |
+| Páginas de servicio | `Service` |
+| FAQ | `FAQPage` + `Question` + `AcceptedAnswer` |
+| Cobertura | `LocalBusiness` con `areaServed` (Lima, Ica, Pisco, Huacho) |
+| Todas las subpáginas | `BreadcrumbList` |
 
-## 13. Contenido Requerido del Cliente
+### SEO Local
 
-**El cliente debe proveer los siguientes materiales antes del inicio del diseño:**
-
-| Material | Estado | Prioridad | Impacto |
-|----------|--------|-----------|---------|
-| Logo en alta resolución (PNG / SVG) | **Disponible** | Alta | Identidad visual |
-| Fotografías reales del H350 (exterior e interior) | **Disponible** | Alta | Hero, servicios, flota |
-| Autorización de SEDAPAL, CLARO, MOVISTAR | **PENDIENTE** | **Alta** | Sección "Empresas que confían" |
-| Textos de servicios validados o a redactar | Pendiente | Alta | Copy de todas las páginas |
-| Lista de distritos y regiones que cubren (Lima + regiones) | Confirmada en Brief | Alta | Página /cobertura/ |
-| Dirección o zona de operación en Lima | Pendiente | Media | Página /contacto/ — mapa |
-| Testimonios o frases de clientes corporativos | Pendiente | Media | Sección social proof |
-| Destinos turísticos frecuentes | Pendiente | Media | Página /transporte-turistico/ |
-| Precios o rangos de tarifa (B2C) | Pendiente | Media | FAQ + página aeropuerto |
-| Videos del vehículo o servicio | Pendiente | Baja | Conversión B2B |
-| Tipografía de marca definida | Pendiente | Baja | Design system |
-| Manual de marca | Pendiente | Baja | Guía visual |
-
-**Nota crítica:** Si la autorización de SEDAPAL, CLARO y MOVISTAR no llega antes del lanzamiento, la sección "Empresas que confían en nosotros" debe usar el fallback: *"Empresas del sector telecomunicaciones y servicios públicos con operaciones en Lima"*. No publicar nombres sin autorización escrita.
+- Google Business Profile: crear/reclamar — **ACCIÓN INMEDIATA**
+- Categoría GBP: "Transportation service"
+- Área de servicio: Lima Metropolitana + Ica + Pisco + Huacho
 
 ---
 
-## 14. Arquitectura — Diagrama Mermaid
+## 15. Arquitectura Técnica — Stack
+
+### Stack oficial del proyecto
+
+*(Basado en DECISIONES_ARQUITECTONICAS.md + Blueprint 02_WEB_CORPORATIVA.md)*
+
+| Capa | Herramienta | Decisión del sistema |
+|------|-------------|---------------------|
+| CMS | WordPress | Decisión 01 — Aceptada |
+| Page Builder | Elementor Pro | Decisión 02 — Aceptada |
+| SEO | Rank Math | Decisión 09 — Aceptada |
+| Campos custom | ACF (Advanced Custom Fields) | Blueprint Web Corporativa |
+| Formularios | Fluent Forms | Blueprint Web Corporativa |
+| Multiidioma | WPML (preferido) o Polylang | — |
+| WhatsApp | WP Social Chat | — |
+| Analytics | Google Analytics 4 vía GTM | Decisión 10 — Aceptada |
+| Tag Manager | Google Tag Manager | Decisión 11 — Tracking |
+| CDN / Seguridad | Cloudflare | Stack oficial del sistema |
+| Caché / Performance | LiteSpeed Cache | Stack oficial del sistema |
+| Control de versiones | GitHub | Decisión 06 — Aceptada |
+| Hosting | PENDIENTE DE VALIDACIÓN | — |
+
+### Uso de ACF en este proyecto
+
+| Campo ACF | Tipo | Usado en |
+|-----------|------|---------|
+| Flota — Nombre del vehículo | Texto | Página Flota / Nosotros |
+| Flota — Capacidad | Número | Página Flota / Servicios |
+| Flota — Especificaciones | Repeater | Página Flota |
+| Flota — Galería | Galería | Todas las páginas de servicio |
+| Servicio — Icono | Imagen | Tarjetas de servicio |
+| Servicio — CTA tipo | Select (B2B/B2C) | CTAs dinámicos por servicio |
+
+### Nota sobre JetEngine / Crocoblock
+
+El sistema tiene disponible Crocoblock/JetEngine (Decisión 03). Para este proyecto **no se activa** — la complejidad dinámica es baja y ACF + Elementor Pro es suficiente. Si en Fase 2 se agrega un directorio de zonas de cobertura dinámico, se puede activar JetEngine.
+
+---
+
+## 16. Integraciones
+
+| Integración | Prioridad | Estado | Acción del cliente |
+|-------------|-----------|--------|--------------------|
+| Google Analytics 4 | Alta | Pendiente | Crear cuenta o dar acceso |
+| Google Search Console | Alta | Pendiente | Verificar dominio |
+| Google Tag Manager | Alta | Pendiente | Crear contenedor |
+| Google Business Profile | Alta | **URGENTE** | Crear/reclamar perfil |
+| Google Maps (embed /cobertura/) | Media | Pendiente | No requiere del cliente |
+| WhatsApp Business (+51 941 747 096) | Alta | Confirmar | Confirmar número activo |
+| Email (notif. formulario) | Alta | Pendiente | Confirmar email destino |
+| Meta Pixel | Baja | Fase 2 | — |
+
+---
+
+## 17. Arquitectura — Diagrama Mermaid
+
+*(Obligatorio según Decisión 12 del sistema)*
 
 ```mermaid
 graph TD
-    A["🌐 Google"] --> B["Home /"]
-    A --> C["Transporte Personal /servicios/transporte-de-personal/"]
-    A --> D["Aeropuerto /servicios/traslado-aeropuerto/"]
-    A --> E["Cobertura /cobertura/"]
+    A["🌐 Búsqueda Google"] --> B["🏠 Home /"]
+    A --> C["🏢 Transporte Personal\n/servicios/transporte-de-personal/"]
+    A --> D["✈ Aeropuerto\n/servicios/traslado-aeropuerto/"]
+    A --> E["📍 Cobertura\n/cobertura/"]
 
     B --> C
-    B --> F["Transporte Corporativo /servicios/transporte-corporativo/"]
+    B --> F["💼 Corporativo\n/servicios/transporte-corporativo/"]
     B --> D
-    B --> G["Turístico /servicios/transporte-turistico/"]
-    B --> H["Grupos /servicios/transporte-grupos/"]
-    B --> I["Nosotros /nosotros/"]
+    B --> G["🌄 Turístico\n/servicios/transporte-turistico/"]
+    B --> H["👥 Grupos\n/servicios/transporte-grupos/"]
+    B --> I["🏛 Nosotros\n/nosotros/"]
 
-    C --> J["📋 Formulario de Cotización B2B"]
+    C --> J["📋 Formulario Cotización B2B"]
     F --> J
     H --> J
-
-    D --> K["💬 WhatsApp B2C"]
-    G --> K
-
-    J --> L["✅ Lead B2B → Propuesta Comercial"]
-    K --> M["✅ Lead B2C → Reserva"]
-
     E --> C
-    N["FAQ /preguntas-frecuentes/"] --> C
-    N --> J
-    O["Contacto /contacto/"] --> J
-    O --> K
+    K["❓ FAQ\n/preguntas-frecuentes/"] --> J
+    L["📞 Contacto\n/contacto/"] --> J
 
-    style C fill:#f4c430,stroke:#333,color:#000
-    style J fill:#22c55e,stroke:#333,color:#fff
-    style K fill:#25D366,stroke:#333,color:#fff
-    style L fill:#3b82f6,stroke:#333,color:#fff
-    style M fill:#3b82f6,stroke:#333,color:#fff
+    D --> M["💬 WhatsApp B2C"]
+    G --> M
+
+    J --> N["✅ Lead B2B\n→ Propuesta → Contrato"]
+    M --> O["✅ Lead B2C\n→ Reserva confirmada"]
+
+    style C fill:#F5C400,stroke:#111,color:#000,font-weight:bold
+    style J fill:#22C55E,stroke:#111,color:#fff
+    style M fill:#25D366,stroke:#111,color:#fff
+    style N fill:#3B82F6,stroke:#111,color:#fff
+    style O fill:#3B82F6,stroke:#111,color:#fff
 ```
 
 ---
 
-## 15. KPIs y Criterios de Éxito
+## 18. Estructura de URLs
 
-### KPIs de conversión B2B (primarios)
+| Página | URL | Keyword en URL | Nivel |
+|--------|-----|:-:|:---:|
+| Home ES | `/` | — | 1 |
+| Nosotros | `/nosotros/` | — | 2 |
+| Transporte Personal | `/servicios/transporte-de-personal/` | ✓ | 3 |
+| Transporte Corporativo | `/servicios/transporte-corporativo/` | ✓ | 3 |
+| Traslado Aeropuerto | `/servicios/traslado-aeropuerto/` | ✓ | 3 |
+| Transporte Turístico | `/servicios/transporte-turistico/` | ✓ | 3 |
+| Transporte Grupos | `/servicios/transporte-grupos/` | ✓ | 3 |
+| Cobertura | `/cobertura/` | ✓ | 2 |
+| FAQ | `/preguntas-frecuentes/` | — | 2 |
+| Contacto | `/contacto/` | — | 2 |
+| Home EN | `/en/` | — | 1 |
+| About | `/en/about/` | — | 2 |
+| Staff Transport | `/en/services/staff-transport/` | ✓ | 3 |
+| Airport Transfer | `/en/services/airport-transfer/` | ✓ | 3 |
+| Tour Transport | `/en/services/tour-transport/` | ✓ | 3 |
+| Coverage | `/en/coverage/` | — | 2 |
+| FAQ EN | `/en/faq/` | — | 2 |
+| Contact EN | `/en/contact/` | — | 2 |
+
+**Reglas de URL aplicadas (sistema):**
+- Minúsculas sin tildes ni caracteres especiales
+- Guiones medios como separadores (sin guiones bajos)
+- Keyword principal incluida en el slug donde es posible
+- Máximo 3-4 palabras por slug
+- Versión EN: prefijo `/en/` gestionado por WPML
+
+**Decisión arquitectónica — Versión EN compacta:**
+La versión EN fusiona "Transporte Corporativo" y "Transporte para Grupos" dentro de "Staff Transport" (`/en/services/staff-transport/`). Razón: concentra autoridad SEO en una sola página pilar en inglés y simplifica la experiencia para usuarios angloparlantes que principalmente buscan empresas de B2B transport o airport transfer.
+
+---
+
+# PARTE III — ESPECIFICACIÓN DE PÁGINAS
+
+---
+
+## 19. Páginas — Especificación Técnica
+
+### 19.1 Home (`/`)
+
+| Campo | Valor |
+|-------|-------|
+| Keyword H1 | transporte de personal lima |
+| Meta title | Transporte de Personal y Movilidad Corporativa en Lima \| Mayhil Express |
+| Meta description | Empresa de transporte de personal para empresas en Lima con GPS en tiempo real. 24/7 · 17 pax · Lima, Ica, Pisco y Huacho. Sin permanencia mínima. Solicita cotización. |
+| Schema | Organization + LocalBusiness (TransportService) + WebSite |
+| CTA primario | Formulario B2B (embebido en la página) |
+| CTA secundario | WhatsApp B2C |
+| Módulo clave | Sección social proof SEDAPAL/CLARO/MOVISTAR |
+
+**Secciones en orden:**
+1. Header sticky (global)
+2. Hero B2B — Headline + foto H350 + 2 CTAs
+3. Trust bar — 5 íconos (GPS · 24/7 · 17 pax · Lima+regiones · 5 años)
+4. Servicios — 5 tarjetas B2B-first (Personal destacada)
+5. Diferenciadores — 6 bloques (GPS, capacidad, 24/7, cobertura, sin contrato, bilingüe)
+6. Social proof — logos SEDAPAL/CLARO/MOVISTAR (condicional) o texto fallback
+7. Formulario cotización B2B embebido (9 campos)
+8. Flota — H350 foto + especificaciones
+9. Cobertura teaser — Lima + Ica/Pisco/Huacho + CTA a /cobertura/
+10. CTA final B2C — WhatsApp
+11. Footer (global)
+
+---
+
+### 19.2 Transporte de Personal (`/servicios/transporte-de-personal/`) ★
+
+| Campo | Valor |
+|-------|-------|
+| Keyword H1 | transporte de personal lima |
+| Keywords secundarias | empresa de transporte de personal · movilidad para empresas lima · transporte de personal Lima Ica |
+| Meta title | Transporte de Personal Lima para Empresas \| GPS · 24/7 \| Mayhil Express |
+| Meta description | Servicio de transporte de personal para empresas en Lima con monitoreo GPS en tiempo real. Lima, Ica, Pisco y Huacho. Sin permanencia mínima. Cotización en 24h. |
+| Schema | Service + BreadcrumbList |
+| CTA primario | Formulario B2B embebido |
+| Inversión de contenido | MÁXIMA — página pilar |
+
+**Secciones obligatorias:**
+1. Hero B2B específico — H1 keyword + promesa
+2. Propuesta de valor — 3 bloques (puntualidad, control GPS, sin contrato)
+3. **Sección GPS** — diferenciador central con imagen/mockup GPS
+4. Cobertura — Lima + Ica/Pisco/Huacho con enlace a /cobertura/
+5. Social proof — SEDAPAL/CLARO/MOVISTAR
+6. Cómo funciona — 3 pasos
+7. Formulario B2B embebido (mismo componente global)
+8. FAQ teaser — 4 preguntas B2B con accordion
+
+---
+
+### 19.3 Cobertura (`/cobertura/`) ★
+
+| Campo | Valor |
+|-------|-------|
+| Keyword H1 | cobertura transporte lima ica pisco huacho |
+| Meta title | Zonas de Cobertura Lima, Ica, Pisco y Huacho \| Transporte de Personal \| Mayhil Express |
+| Meta description | Cubrimos todos los distritos de Lima Metropolitana y regiones: Ica, Pisco, Huacho. Transporte de personal e interprovincial para empresas. Consulta tu zona. |
+| Schema | LocalBusiness + areaServed |
+| CTA | Formulario / WhatsApp |
+| Diferenciador | Único del mercado local — competitors no tienen cobertura regional |
+
+---
+
+### 19.4 Páginas de servicio secundarias
+
+*Estructura reutilizable para: Corporativo / Aeropuerto / Turístico / Grupos*
+
+| Sección | Contenido | CTA |
+|---------|-----------|-----|
+| Hero | H1 keyword del servicio + párrafo | Formulario (B2B) o WhatsApp (B2C) |
+| Descripción | Qué incluye + para quién es | — |
+| Flota | H350 foto + specs relevantes | — |
+| Servicios relacionados | 2-3 tarjetas enlazadas | → Ver servicio |
+| CTA cierre | Formulario embebido o botón WhatsApp | Acción principal |
+
+**CTA por audiencia:**
+
+| Página | CTA primario | CTA secundario |
+|--------|-------------|----------------|
+| Corporativo | Formulario B2B | WhatsApp |
+| Aeropuerto | WhatsApp | Formulario |
+| Turístico | WhatsApp | Formulario |
+| Grupos | Formulario (cantidad personas) | WhatsApp |
+
+---
+
+### 19.5 Formulario B2B — Especificación técnica (Fluent Forms)
+
+| Campo | Tipo | Requerido | Opciones |
+|-------|------|:---------:|---------|
+| Nombre de empresa | Texto | ✓ | — |
+| Nombre del responsable | Texto | ✓ | — |
+| Cargo | Texto | — | — |
+| Email corporativo | Email | ✓ | Validación formato |
+| Teléfono | Teléfono | ✓ | — |
+| Cantidad de personas | Select | ✓ | 1–10 / 11–17 / 17+ / Por definir |
+| Frecuencia | Select | — | Diario / Semanal / Puntual / Por definir |
+| Zona de recojo | Texto | — | — |
+| Zona de destino | Texto | — | — |
+| Horario aproximado | Texto | — | — |
+| Mensaje adicional | Textarea | — | — |
+
+**Configuración de notificaciones:**
+- Email destino: servicio@mayhilexpress.com (confirmar con cliente)
+- Asunto: `[COTIZACIÓN B2B] Nueva solicitud desde mayhilexpress.com`
+- Email de confirmación al lead: activar con respuesta automática
+- Integración GTM: evento `form_submit` con label `cotizacion_b2b`
+
+---
+
+# PARTE IV — ENTREGABLES, CONTENIDO Y KPIs
+
+---
+
+## 20. Contenido Requerido del Cliente
+
+*El cliente debe entregar antes del inicio del desarrollo:*
+
+| Material | Estado | Prioridad | Bloqueante |
+|----------|--------|-----------|:---------:|
+| Logo alta resolución (PNG/SVG) | **Disponible** | Alta | No |
+| Fotos H350 exterior e interior | **Disponible** | Alta | No |
+| **Autorización SEDAPAL/CLARO/MOVISTAR** | **PENDIENTE** | Alta | **SÍ** |
+| Acceso a hosting | PENDIENTE DE VALIDACIÓN | **Crítico** | Sí |
+| Acceso al dominio mayhilexpress.com | PENDIENTE DE VALIDACIÓN | **Crítico** | Sí |
+| Cuenta/acceso GA4 | PENDIENTE DE VALIDACIÓN | Alta | No |
+| Cuenta/acceso GTM | PENDIENTE DE VALIDACIÓN | Alta | No |
+| Textos de servicios (validados) | PENDIENTE DE VALIDACIÓN | Alta | No |
+| Dirección física en Lima | PENDIENTE DE VALIDACIÓN | Media | No |
+| Precios orientativos B2C | PENDIENTE DE VALIDACIÓN | Media | No |
+| Destinos turísticos frecuentes | PENDIENTE DE VALIDACIÓN | Media | No |
+| Tipografía de marca | PENDIENTE DE VALIDACIÓN | Baja | No |
+| Videos del vehículo | PENDIENTE DE VALIDACIÓN | Baja | No |
+
+---
+
+## 21. Entregables del Proyecto
+
+| # | Entregable | Fase | Agente |
+|---|-----------|------|--------|
+| 1 | Sitio WordPress — 10 páginas ES | 1 | 08_WORDPRESS_DEVELOPER |
+| 2 | Versión inglés — 9 páginas EN | 1 | 08_WORDPRESS_DEVELOPER |
+| 3 | Formulario B2B operativo + notificaciones | 1 | 08_WORDPRESS_DEVELOPER |
+| 4 | Widget WhatsApp configurado (B2B + B2C) | 1 | 08_WORDPRESS_DEVELOPER |
+| 5 | Sección social proof (logos o fallback) | 1 | 08_WORDPRESS_DEVELOPER |
+| 6 | Página cobertura con Google Maps | 1 | 08_WORDPRESS_DEVELOPER |
+| 7 | SEO on-page completo (Rank Math) | 1 | 08_WORDPRESS_DEVELOPER |
+| 8 | Schema markup por tipo de página | 1 | 08_WORDPRESS_DEVELOPER |
+| 9 | GA4 + GTM instalados + eventos tracking | 1 | 08_WORDPRESS_DEVELOPER |
+| 10 | Sitemap XML en Search Console | 1 | 08_WORDPRESS_DEVELOPER |
+| 11 | hreflang ES/EN configurado | 1 | 08_WORDPRESS_DEVELOPER |
+| 12 | Sitio responsive + Core Web Vitals ≥ 75 | 1 | 08_WORDPRESS_DEVELOPER |
+| 13 | Checklist QA completado | 1 | 10_QA_MANTENIMIENTO |
+| 14 | Deploy a producción + DNS | 1 | 11_DEVOPS_DEPLOYMENT |
+| 15 | Google Business Profile configurado | 1 | Agencia + Cliente |
+| 16 | Blog — primeras entradas SEO B2B | 2 | 08_WORDPRESS_DEVELOPER |
+| 17 | Landing Ads para Transporte de Personal | 2 | 08_WORDPRESS_DEVELOPER |
+
+---
+
+## 22. KPIs y Criterios de Éxito
+
+*(Blueprint Web Corporativa: KPIs de Negocio + SEO)*
+
+### KPIs de Negocio (Blueprint: Leads / Cotizaciones)
 
 | KPI | Meta mes 1 | Meta mes 3 |
-|-----|-----------|-----------|
-| Formularios de cotización enviados | ≥ 3 | ≥ 10 |
+|-----|:---------:|:---------:|
+| Formularios B2B enviados | ≥ 3 | ≥ 10 |
 | Propuestas comerciales generadas | ≥ 1 | ≥ 4 |
-| Tasa formulario completado / visita | ≥ 2% | ≥ 3% |
+| Clics WhatsApp (B2C) | ≥ 15 | ≥ 50 |
+| Tasa de conversión visita→formulario | — | ≥ 2% |
 
-### KPIs de conversión B2C (secundarios)
-
-| KPI | Meta mes 1 | Meta mes 3 |
-|-----|-----------|-----------|
-| Clics al botón WhatsApp | ≥ 15 | ≥ 50 |
-| Tasa clic WhatsApp / visita | ≥ 3% | ≥ 5% |
-
-### KPIs de SEO
+### KPIs de SEO (Blueprint: Keywords / Tráfico orgánico)
 
 | KPI | Meta mes 3 |
-|-----|-----------|
+|-----|:---------:|
 | Keywords B2B en top 10 Google | ≥ 2 |
 | Keywords regionales en top 20 | ≥ 3 |
 | Tráfico orgánico mensual | ≥ 300 sesiones |
-| Core Web Vitals — LCP | < 2.5s |
-| Core Web Vitals — CLS | < 0.1 |
+| Core Web Vitals LCP | < 2.5s |
 
-### Criterios de éxito del proyecto
+### Criterios de aceptación del proyecto
 
-1. El sitio genera al menos 1 cotización B2B formal en los primeros 30 días
-2. La página `/servicios/transporte-de-personal/` posiciona en Google para 1+ keyword B2B en 90 días
-3. La sección de cobertura geográfica (Lima + regiones) está publicada y visible al lanzamiento
-4. La sección "Empresas que confían en nosotros" está activa (con logos o con fallback texto) al lanzamiento
-5. El formulario de cotización está operativo y llega al email de Iván Mayorga sin fallo
-6. Google PageSpeed Score ≥ 75 en móvil
-7. El sitio es 100% funcional en iOS y Android
-
----
-
-## 16. Restricciones y Dependencias
-
-| Item | Detalle |
-|------|---------|
-| CMS obligatorio | WordPress |
-| Page builder obligatorio | Elementor Pro |
-| SEO obligatorio | Rank Math |
-| Stack excluido | Ecommerce · pasarela de pago · reservas automáticas · área privada |
-| Idioma principal | Español |
-| Idioma secundario | Inglés |
-| Dominio | mayhilexpress.com |
-| País objetivo principal | Lima, Perú |
-| Países/regiones secundarias | Ica, Pisco, Huacho |
-| Hosting | PENDIENTE DE VALIDACIÓN |
-| Presupuesto | PENDIENTE DE VALIDACIÓN |
-| Fecha de entrega | PENDIENTE DE VALIDACIÓN |
-| Dependencia crítica | Autorización de SEDAPAL/CLARO/MOVISTAR para sección social proof |
+1. El formulario B2B funciona y llega al email de Iván Mayorga sin fallos
+2. Al menos 1 cotización recibida en los primeros 30 días post-lanzamiento
+3. La página `/servicios/transporte-de-personal/` está indexada en Google
+4. El sitio pasa Core Web Vitals con score ≥ 75 en PageSpeed (móvil)
+5. La versión EN está disponible y tiene hreflang correcto
+6. El widget WhatsApp está activo con mensaje preconfigurado por audiencia
+7. GA4 registra eventos de formulario enviado y clic en WhatsApp
 
 ---
 
-## 17. Riesgos del Proyecto
-
-| Riesgo | Probabilidad | Impacto | Mitigación |
-|--------|--------------|---------|------------|
-| Cliente no entrega materiales a tiempo | Alta | Alto | Solicitar todo antes de iniciar diseño; bloquear inicio si falta logo o fotos |
-| Autorización SEDAPAL/CLARO/MOVISTAR no llega a tiempo | Media | Alto | Preparar fallback con texto genérico — no retrasar lanzamiento por este elemento |
-| Textos no validados por el cliente | Media | Medio | Redactar desde la agencia, marcar con [PENDIENTE VALIDACIÓN] y solicitar aprobación escrita |
-| Hosting inadecuado para WordPress+Elementor | Media | Alto | Confirmar hosting antes de instalar — mínimo 2GB RAM, PHP 8.1 |
-| Accesos a dominios, hosting o Google no entregados | Media | Alto | Solicitar todos los accesos en sesión de onboarding antes de comenzar |
-| Cambios de alcance no documentados | Alta | Medio | Definir scope sign-off formal antes de desarrollo |
-| SEO sin resultados en 60 días | Alta | Bajo | Alinear expectativas: posicionamiento orgánico tarda 3–6 meses mínimo |
-| Competidores con más dominio authority | Media | Medio | Compensar con contenido B2B específico y keywords de menor competencia (regionales) |
-
----
-
-## 18. Entregables
-
-| # | Entregable | Fase | Responsable |
-|---|-----------|------|-------------|
-| 1 | Sitio web corporativo — 10 páginas ES | 1 | 08_WORDPRESS_DEVELOPER |
-| 2 | Versión inglés — 9 páginas EN | 1 | 08_WORDPRESS_DEVELOPER |
-| 3 | Formulario de cotización B2B operativo | 1 | 08_WORDPRESS_DEVELOPER |
-| 4 | Widget WhatsApp configurado (B2B y B2C) | 1 | 08_WORDPRESS_DEVELOPER |
-| 5 | Sección "Empresas que confían en nosotros" | 1 | 08_WORDPRESS_DEVELOPER |
-| 6 | Página de cobertura geográfica con mapa | 1 | 08_WORDPRESS_DEVELOPER |
-| 7 | SEO on-page completo con Rank Math | 1 | 08_WORDPRESS_DEVELOPER |
-| 8 | Schema markup LocalBusiness + Service | 1 | 08_WORDPRESS_DEVELOPER |
-| 9 | GA4 + GTM instalados y configurados | 1 | 08_WORDPRESS_DEVELOPER |
-| 10 | Tracking de eventos: formulario + WhatsApp | 1 | 08_WORDPRESS_DEVELOPER |
-| 11 | Sitemap XML enviado a Search Console | 1 | 08_WORDPRESS_DEVELOPER |
-| 12 | Sitio responsive y mobile-first | 1 | 08_WORDPRESS_DEVELOPER |
-| 13 | QA completo | 1 | 10_QA_MANTENIMIENTO |
-| 14 | Deploy a producción | 1 | 11_DEVOPS_DEPLOYMENT |
-| 15 | Blog (primeros posts SEO B2B) | 2 | 08_WORDPRESS_DEVELOPER |
-| 16 | Landing pages para Google Ads B2B | 2 | 08_WORDPRESS_DEVELOPER |
-
----
-
-## 19. Tiempo Estimado
+## 23. Tiempo Estimado
 
 | Fase | Actividad | Días hábiles |
 |------|-----------|:---:|
-| 1 | Setup: WordPress + Elementor Pro + plugins base + configuración SEO inicial | 1 |
-| 2 | Diseño y desarrollo: Home (todas las secciones incluyendo formulario y social proof) | 2–3 |
-| 3 | Diseño y desarrollo: Transporte de Personal (página crítica — máxima inversión) | 1–2 |
-| 4 | Diseño y desarrollo: Nosotros + Cobertura + FAQ + Contacto | 2 |
-| 5 | Diseño y desarrollo: 4 páginas de servicio restantes (Corporativo, Aeropuerto, Turístico, Grupos) | 2 |
-| 6 | Multiidioma — versión EN completa | 2 |
-| 7 | SEO on-page: meta titles, descriptions, schema markup, breadcrumbs, alt text | 1 |
-| 8 | Integraciones: GA4, GTM, tracking formulario + WhatsApp, Search Console | 1 |
-| 9 | QA: responsive, velocidad, formulario, cross-browser, enlazado interno | 1 |
-| 10 | Correcciones y entrega final | 1 |
-| **Total** | | **~14 días hábiles** |
+| 1 | Setup: WordPress + plugins base (Elementor Pro, Rank Math, Fluent Forms, ACF, WPML, WP Social Chat, GTM, LiteSpeed) | 1 |
+| 2 | Desarrollo: Home (todas las secciones) + Header/Footer globales | 2–3 |
+| 3 | Desarrollo: /servicios/transporte-de-personal/ (página pilar) | 1–2 |
+| 4 | Desarrollo: Nosotros + Cobertura + FAQ + Contacto | 2 |
+| 5 | Desarrollo: 4 páginas de servicio secundarias | 2 |
+| 6 | Multiidioma: versión EN completa (9 páginas) | 2 |
+| 7 | SEO on-page: meta titles/descriptions, schema, breadcrumbs, alt text | 1 |
+| 8 | Integraciones: GA4, GTM, tracking, Search Console, WhatsApp | 1 |
+| 9 | QA: responsive, velocidad, formulario, cross-browser, enlazado | 1 |
+| 10 | Correcciones + lanzamiento + GBP | 1 |
+| **Total** | | **~13–14 días hábiles** |
+
+*Rango del blueprint 02_WEB_CORPORATIVA: 5–15 días. Este proyecto está dentro del rango superior por: 19 URLs totales, multiidioma, formulario B2B personalizado y página de cobertura.*
 
 ---
 
-## 20. Agentes Involucrados
+## Checklist Final — PRD
 
-| Agente | Rol | Fase |
-|--------|-----|------|
-| 02_ESTRATEGA_DE_NEGOCIO | Completado — Brief v3.1 entregado | ✅ |
-| 01_JEFE_DE_PROYECTO_IA | Coordinación y PRD | ✅ |
-| 03_ARQUITECTO_WEB | Arquitectura y PRD | ✅ |
-| 04_UX_UI_DESIGNER | Wireframes y design system | **Siguiente** |
-| 05_COPYWRITER_WEB | Copy Home, Transporte Personal, servicios, FAQs, EN | Fase 3 |
-| 06_EXPERTO_SEO | Keyword research final, arquitectura SEO, plan de contenidos | Fase 3 |
-| 08_WORDPRESS_DEVELOPER | Desarrollo completo | Fase 4 |
-| 10_QA_MANTENIMIENTO | Testing y correcciones | Fase 5 |
-| 11_DEVOPS_DEPLOYMENT | Deploy y configuración de producción | Fase 6 |
-
----
-
-## 21. Próximos Pasos
-
-### Inmediatos (antes de diseño)
-
-1. **[CRÍTICO]** Confirmar autorización de SEDAPAL, CLARO y MOVISTAR para uso de nombre y logo en el sitio
-2. Validar este PRD v2 con Iván Mayorga — Director de Operaciones
-3. Confirmar hosting: proveedor, plan y accesos
-4. Confirmar dominio mayhilexpress.com: acceso y estado de renovación
-5. Crear o compartir accesos a Google Analytics, Search Console y GTM
-6. Entregar materiales pendientes: textos, dirección, precios orientativos para B2C, destinos turísticos
-
-### Siguiente fase del sistema
-
-Pasar el proyecto al agente **04_UX_UI_DESIGNER** con este PRD v2 como input.
-
-Entregables esperados del UX/UI:
-- Wireframes de Home (todas las secciones)
-- Wireframe de `/servicios/transporte-de-personal/`
-- Wireframe del formulario de cotización B2B
-- Design System: colores, tipografía, botones, íconos
-
----
-
-## Checklist de Validación — JEFE DE PROYECTO + ARQUITECTO WEB
-
+### JEFE DE PROYECTO IA
 - [x] Objetivos SMART definidos
 - [x] Alcance definido (dentro y fuera de scope)
-- [x] Brief v3.1 respetado completamente
-- [x] Posicionamiento B2B-first reflejado en toda la arquitectura
-- [x] Buyer Persona A (decisor corporativo) como audiencia primaria
-- [x] Formulario de cotización B2B como CTA primario
-- [x] WhatsApp como CTA secundario (B2C)
-- [x] Transporte de Personal como página crítica en sitemap
-- [x] Cobertura regional (Lima + Ica/Pisco/Huacho) como página independiente
-- [x] Sección "Empresas que confían" planificada con fallback
-- [x] SEO por clusters (B2B, corporativo, aeropuerto, regional)
-- [x] Enlazado interno estratégico definido
-- [x] Stack tecnológico definido (WordPress + Elementor Pro + Rank Math)
+- [x] Funcionalidades priorizadas (15 ítems con prioridad)
+- [x] Riesgos identificados por categoría (negocio, contenido, SEO, técnico)
+- [x] Roadmap con 10 fases y tiempo estimado
+- [x] Agentes asignados con estado actual
+- [x] Próxima acción definida (08_WORDPRESS_DEVELOPER)
+
+### ARQUITECTO WEB
+- [x] Blueprint aplicado: 02_WEB_CORPORATIVA + 05_GENERACION_DE_LEADS
+- [x] Sitemap completo (10 ES + 9 EN = 19 URLs)
+- [x] Arquitectura de información definida con jerarquía
+- [x] Flujos de usuario B2B y B2C documentados
+- [x] Arquitectura SEO con clusters y schema
+- [x] Stack tecnológico completo (conforme a DECISIONES_ARQUITECTONICAS.md)
+- [x] Uso de ACF documentado para campos dinámicos
 - [x] Integraciones definidas
-- [x] Funcionalidades priorizadas
-- [x] Riesgos identificados y mitigación planificada
-- [x] KPIs medibles definidos
-- [x] Tiempo estimado calculado (~14 días hábiles)
-- [x] Agentes del sistema asignados
-- [x] Próximos pasos definidos
-- [ ] Validación formal del cliente pendiente
-- [ ] Autorización SEDAPAL/CLARO/MOVISTAR pendiente
+- [x] Diagrama Mermaid generado (Decisión 12)
+- [x] URLs definidas con reglas del sistema
+- [x] Formulario B2B especificado técnicamente (Fluent Forms)
+
+### DATOS
+- [x] Todo dato desconocido marcado como PENDIENTE DE VALIDACIÓN
+- [x] Ninguna información inventada
+- [x] Brief v3.1 respetado completamente
+- [x] Decisiones arquitectónicas del sistema respetadas
+- [ ] Validación formal del cliente — **PENDIENTE**
+- [ ] Autorización SEDAPAL/CLARO/MOVISTAR — **PENDIENTE**
 
 ---
 
-*Documento producido por 01_JEFE_DE_PROYECTO_IA + 03_ARQUITECTO_WEB · IA-WEB-STUDIO-OS · Mayhil Express · 2026-06-17 · Versión 2.0*
+*Documento producido por 01_JEFE_DE_PROYECTO_IA + 03_ARQUITECTO_WEB · IA-WEB-STUDIO-OS · Mayhil Express · 2026-06-17 · Versión 3.0*
+
+*Blueprints aplicados: 02_WEB_CORPORATIVA.md + 05_GENERACION_DE_LEADS.md*
+
+*Próximo agente: 08_WORDPRESS_DEVELOPER*
